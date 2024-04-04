@@ -1,7 +1,7 @@
 package com.example.movies_app.movieList.utils
 
 import androidx.compose.foundation.layout.Row
-import androidx.compose.material.Icon
+import androidx.compose.material3.Icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.rounded.StarHalf

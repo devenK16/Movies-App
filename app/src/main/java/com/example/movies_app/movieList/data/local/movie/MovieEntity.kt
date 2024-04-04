@@ -1,7 +1,8 @@
 package com.example.movies_app.movieList.data.local.movie
 
+import androidx.room.Entity
 import androidx.room.PrimaryKey
-
+@Entity
 data class MovieEntity(
     val adult: Boolean,
     val backdrop_path: String,
@@ -16,7 +17,9 @@ data class MovieEntity(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int,
+
     @PrimaryKey
     val id: Int,
-    val category: String
+
+    val category: String,
 )
