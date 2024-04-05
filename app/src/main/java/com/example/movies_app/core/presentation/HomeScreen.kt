@@ -1,6 +1,5 @@
 package com.example.movies_app.core.presentation
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -25,12 +24,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -38,13 +35,15 @@ import androidx.navigation.compose.rememberNavController
 import com.example.movies_app.R
 import com.example.movies_app.movieList.presentation.MovieListUiEvent
 import com.example.movies_app.movieList.presentation.MovieListViewModel
+import com.example.movies_app.movieList.presentation.PopularMoviesScreen
+import com.example.movies_app.movieList.presentation.UpcomingMoviesScreen
 import com.example.movies_app.movieList.utils.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavHostController) {
     val movieListViewModel = hiltViewModel<MovieListViewModel>()
-    val movieState = movieListViewModel.movieListState.collectAsState().value
+    val movieListState = movieListViewModel.movieListState.collectAsState().value
     val bottomNavController = rememberNavController()
 
     Scaffold(
@@ -58,7 +57,7 @@ fun HomeScreen(navController: NavHostController) {
             TopAppBar(
                 title = {
                     Text(
-                        text = if (movieState.isCurrentPopularScreen)
+                        text = if (movieListState.isCurrentPopularScreen)
                             stringResource(R.string.popular_movies)
                         else
                             stringResource(R.string.upcoming_movies),
@@ -82,10 +81,19 @@ fun HomeScreen(navController: NavHostController) {
                 startDestination = Screen.PopularMovieList.rout
             ) {
                 composable(Screen.PopularMovieList.rout){
-//                    PopularMoviesScreen()
+                    PopularMoviesScreen(
+                        navController = navController,
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent
+                    )
                 }
                 composable(Screen.UpcomingMovieList.rout){
-//                    UpcomingMoviesScreen()
+                    UpcomingMoviesScreen(
+                        navController = navController,
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent
+                    )
+
                 }
             }
         }
