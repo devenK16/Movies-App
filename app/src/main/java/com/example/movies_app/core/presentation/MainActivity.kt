@@ -12,14 +12,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.movies_app.movieList.presentation.MovieListViewModel
+import com.example.movies_app.details.presentation.DetailsScreen
 import com.example.movies_app.movieList.utils.Screen
 import com.example.movies_app.ui.theme.MoviesAppTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -49,8 +47,8 @@ class MainActivity : ComponentActivity() {
                             arguments = listOf(
                                 navArgument("movieId") {type = NavType.IntType}
                             )
-                        ){backStackEntry->
-//                            DetailsScreen(backStackEntry)
+                        ){
+                            DetailsScreen()
                         }
                     }
                 }
