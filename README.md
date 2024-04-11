@@ -13,10 +13,10 @@
   
 # Images
 <p>
-  <img src="https://github.com/devenK16/Movies-App/assets/91540949/f365b38b-ea4b-46fa-8219-a5d774df368b" alt="m1" width="300" height="700" hspace="50">
-  <img src="https://github.com/devenK16/Movies-App/assets/91540949/9269d123-ce27-41ab-9ed8-cb2dac11728e" alt="m2" width="300" height="700" hspace="50">
+  <img src="https://github.com/devenK16/Movies-App/assets/91540949/f365b38b-ea4b-46fa-8219-a5d774df368b" alt="m1" width="300" height="700" hspace="20">
+  <img src="https://github.com/devenK16/Movies-App/assets/91540949/9269d123-ce27-41ab-9ed8-cb2dac11728e" alt="m2" width="300" height="700" hspace="20">
 </p>
 <p>
-  <img src="https://github.com/devenK16/Movies-App/assets/91540949/9797ccc4-655b-47ce-8c11-2cdaa3365525" alt="m4" width="300" height="700" hspace="50">
-  <img src="https://github.com/devenK16/Movies-App/assets/91540949/1a6565a6-9457-41df-9469-41212474726d" alt="m3" width="300" height="700" hspace="50">
+  <img src="https://github.com/devenK16/Movies-App/assets/91540949/9797ccc4-655b-47ce-8c11-2cdaa3365525" alt="m4" width="300" height="700" hspace="20">
+  <img src="https://github.com/devenK16/Movies-App/assets/91540949/1a6565a6-9457-41df-9469-41212474726d" alt="m3" width="300" height="700" hspace="20">
 </p>
